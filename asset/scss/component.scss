@@ -1,0 +1,87 @@
+// component
+.box{
+  display: flex;
+  .items{
+    box-sizing: border-box;
+    padding: 50px;
+    flex: 100%;
+    flex-shrink: 0;
+    font-size: $fontSizeMid;
+    .title{
+      font-size: $titleSizeMid;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  // 기본 틀에서 조금씩 변형시켜서 재활용 가능
+  &.items_2{
+    .items{
+      flex: 50%;
+    }
+  }
+  &.expand{
+    .items{
+      padding: 50px 0;
+    }
+  }
+  &.reverse{
+    flex-direction: row-reverse;
+  }
+}
+
+// general button
+.gbtn{
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: $gbtnColor;
+  color: white;
+  border: 1px solid $borderColorPrimary;
+  &:hover{
+    // background: transparent;
+    background: white;
+    color: $gbtnColor;
+  }
+  &.middle_size{
+    // 다양한 크기의 버튼을 미리 만들어둘 수 있다
+  }
+  &.small_size{
+
+  }
+}
+
+
+//table
+table{
+  width: 100%;
+  table-layout: fixed;/*table의 너비를 고정할때 : 각각의 셀요소의 너비가 고정값이 있다면 늘어나거나 줄어들지않게 한다*/
+  border-collapse: collapse;
+  thead{
+    th{
+      color: #fff;
+      background: $tableBg;
+    }
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: $fontColorPrimary;
+    text-transform: uppercase;
+  }
+
+  td{
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: $fontColorPrimary;
+    border-bottom: 1px solid $borderColorPrimary;
+  }
+}
