@@ -376,6 +376,10 @@ body.subpage main .container .inner table + .gbtn {
   float: right;
 }
 
+body.subpage main .container .inner.kakaomap {
+  margin-top: 50px;
+}
+
 body.subpage main .container .inner .box {
   flex-wrap: wrap;
 }
